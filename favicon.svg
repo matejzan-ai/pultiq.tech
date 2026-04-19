@@ -1,0 +1,36 @@
+<svg viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="33%" stop-color="#38bdf8"/>
+      <stop offset="66%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Brand dark background -->
+  <rect width="360" height="360" fill="#07070c"/>
+
+  <!-- pq mirror monogram with brand gradient -->
+  <g transform="translate(30 30)">
+    <path d="M 70 60 L 120 60 A 50 50 0 0 1 120 160 L 95 160 L 95 240 L 70 240 Z"
+          fill="url(#brandGrad)"/>
+    <path d="M 95 85 L 120 85 A 25 25 0 0 1 120 135 L 95 135 Z"
+          fill="#07070c"/>
+  </g>
+
+  <g transform="translate(330 30) scale(-1 1)">
+    <path d="M 70 60 L 120 60 A 50 50 0 0 1 120 160 L 95 160 L 95 240 L 70 240 Z"
+          fill="url(#brandGrad)"/>
+    <path d="M 95 85 L 120 85 A 25 25 0 0 1 120 135 L 95 135 Z"
+          fill="#07070c"/>
+  </g>
+
+  <!-- Tagline -->
+  <text x="180" y="320"
+        font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+        font-size="17" font-weight="500"
+        letter-spacing="14"
+        text-anchor="middle"
+        fill="#e6e6ef">PULTIQ</text>
+</svg>

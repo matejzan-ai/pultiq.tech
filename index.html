@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pultiq — Zdvihnite produktivitu svojho tímu</title>
+<meta name="description" content="Pultiq zjednodušuje komunikáciu so zákazníkmi, projekty, fakturáciu aj evidenciu zariadení — všetko v jednej aplikácii, s AI asistentom." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- SVG icon sprite (Lucide-style, stroke-based) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.582a.5.5 0 0 1 0 .962L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/><path d="M8 10v4"/><path d="M12 10v2"/><path d="M16 10v6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></symbol>
+    <symbol id="i-timer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/></symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></symbol>
+    <symbol id="i-office" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></symbol>
+    <symbol id="i-inbox" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></symbol>
+    <symbol id="i-ticket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 1 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 1 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+    <symbol id="i-activity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.5.5 0 0 1-.96 0L9.24 2.18a.5.5 0 0 0-.96 0l-2.35 8.36A2 2 0 0 1 4 12H2"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<!-- Animated gradient background -->
+<div class="bg-gradient"></div>
+<div class="bg-grid"></div>
+<div class="cursor-glow"></div>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <span class="logo-mark">
+        <svg viewBox="90 80 180 200" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="navG" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#a78bfa"/><stop offset="33%" stop-color="#38bdf8"/><stop offset="66%" stop-color="#34d399"/><stop offset="100%" stop-color="#f472b6"/></linearGradient></defs>
+          <g transform="translate(30 30)" fill="url(#navG)" fill-rule="evenodd"><path d="M 70 60 L 120 60 A 50 50 0 0 1 120 160 L 95 160 L 95 240 L 70 240 Z M 95 85 L 120 85 A 25 25 0 0 1 120 135 L 95 135 Z"/></g>
+          <g transform="translate(330 30) scale(-1 1)" fill="url(#navG)" fill-rule="evenodd"><path d="M 70 60 L 120 60 A 50 50 0 0 1 120 160 L 95 160 L 95 240 L 70 240 Z M 95 85 L 120 85 A 25 25 0 0 1 120 135 L 95 135 Z"/></g>
+        </svg>
+      </span>
+      <span>pultiq</span>
+      <span class="beta-pill">Open Beta</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#features">Funkcie</a></li>
+      <li><a href="#stack">Pre koho</a></li>
+      <li><a href="#workflow">Ako to funguje</a></li>
+      <li><a href="#pricing">Cena</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="/login" class="nav-signin">Prihlásiť sa</a>
+      <a href="/register" class="btn btn-primary btn-sm">Vyskúšať zdarma</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge reveal">
+      <span class="pulse-dot"></span>
+      <span>Open Beta · produkt sa aktívne vyvíja · pridajte sa zdarma</span>
+    </div>
+    <h1 class="hero-title">
+      <span class="word">Nástroj,</span>
+      <span class="word">ktorý</span>
+      <span class="word grad">rozmýšľa</span>
+      <span class="word">za</span>
+      <span class="word">vás.</span>
+    </h1>
+    <p class="hero-sub reveal">
+      Komunikácia so zákazníkmi, projekty, fakturácia aj evidencia zariadení — všetko v jednej aplikácii.
+      Pre freelancerov, malé tímy aj veľké firmy. Pozvete kolegov alebo klientov jedným klikom.
+    </p>
+    <div class="hero-ctas reveal">
+      <a href="#cta" class="btn btn-primary">
+        Začať zdarma
+        <svg class="icon" width="18" height="18"><use href="#i-arrow-right"/></svg>
+      </a>
+      <a href="#demo" class="btn btn-ghost">
+        <svg class="icon" width="18" height="18"><use href="#i-play"/></svg>
+        Pozrieť demo
+      </a>
+    </div>
+
+    <!-- Dashboard mockup -->
+    <div class="hero-visual reveal">
+      <div class="window">
+        <div class="window-bar">
+          <span class="dot red"></span><span class="dot yel"></span><span class="dot grn"></span>
+          <div class="url-pill">app.pultiq.tech/dashboard</div>
+        </div>
+        <div class="window-body">
+          <aside class="mock-side">
+            <div class="mock-logo">P</div>
+            <div class="mock-nav-item active"><svg class="icon"><use href="#i-inbox"/></svg><span>Inbox</span><span class="badge">24</span></div>
+            <div class="mock-nav-item"><svg class="icon"><use href="#i-ticket"/></svg><span>Požiadavky</span></div>
+            <div class="mock-nav-item"><svg class="icon"><use href="#i-folder"/></svg><span>Projekty</span></div>
+            <div class="mock-nav-item"><svg class="icon"><use href="#i-message"/></svg><span>Chat</span></div>
+            <div class="mock-nav-item"><svg class="icon"><use href="#i-receipt"/></svg><span>Fakturácia</span></div>
+            <div class="mock-nav-item"><svg class="icon"><use href="#i-chart"/></svg><span>Prehľady</span></div>
+            <div class="mock-nav-item"><svg class="icon"><use href="#i-settings"/></svg><span>Nastavenia</span></div>
+          </aside>
+          <div class="mock-main">
+            <div class="mock-toolbar">
+              <div class="mock-search"><svg class="icon"><use href="#i-search"/></svg><span>Hľadať v požiadavkách...</span></div>
+              <div class="mock-pill"><svg class="icon"><use href="#i-sparkles"/></svg><span>AI asistent</span></div>
+            </div>
+            <div class="mock-ticket urgent">
+              <div class="mock-prio p-high"></div>
+              <div>
+                <div class="mock-subj">Nefunguje prihlásenie cez Google OAuth</div>
+                <div class="mock-meta">#4812 · anna.novakova@acme.com · pred 2 min</div>
+              </div>
+              <div class="mock-tag tag-red">Urgent</div>
+            </div>
+            <div class="mock-ticket">
+              <div class="mock-prio p-med"></div>
+              <div>
+                <div class="mock-subj">Export faktúr do PDF neobsahuje logo</div>
+                <div class="mock-meta">#4811 · info@globex.com · pred 12 min</div>
+              </div>
+              <div class="mock-tag tag-amber">AI: Fakturácia</div>
+            </div>
+            <div class="mock-ticket">
+              <div class="mock-prio p-low"></div>
+              <div>
+                <div class="mock-subj">Žiadosť o zmenu emailu v profile</div>
+                <div class="mock-meta">#4810 · klient@demo.io · pred 31 min</div>
+              </div>
+              <div class="mock-tag tag-green">Vyriešené</div>
+            </div>
+            <div class="mock-ai">
+              <div class="mock-ai-icon"><svg class="icon"><use href="#i-sparkles"/></svg></div>
+              <div>
+                <div class="mock-ai-title">Návrh odpovede od AI</div>
+                <div class="mock-ai-body">Dobrý deň Anna, problém s Google OAuth sme identifikovali — vypršala prihlasovacia session. Reset...</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="floating-card fc-1">
+        <div class="fc-icon"><svg class="icon"><use href="#i-sparkles"/></svg></div>
+        <div><strong>AI klasifikácia</strong><span>2.3s priemer</span></div>
+      </div>
+      <div class="floating-card fc-2">
+        <div class="fc-icon green"><svg class="icon"><use href="#i-check"/></svg></div>
+        <div><strong>SLA splnené</strong><span>98.4%</span></div>
+      </div>
+      <div class="floating-card fc-3">
+        <div class="fc-icon purple"><svg class="icon"><use href="#i-activity"/></svg></div>
+        <div><strong>Okamžité notifikácie</strong><span>bez čakania</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-hint">
+    <span></span>
+    <small>Scrolluj</small>
+  </div>
+</section>
+
+<!-- Benefit ticker -->
+<section class="ticker-section">
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>★ Jeden inbox pre všetko</span><span>★ Projekty a sprinty</span><span>★ Automatické faktúry</span><span>★ Evidencia zariadení</span><span>★ AI pripraví draft odpovede</span><span>★ Stopky na úlohy</span><span>★ Automatické eskalácie</span><span>★ Vlastný branding</span><span>★ SK · CS · EN · DE</span>
+      <span>★ Jeden inbox pre všetko</span><span>★ Projekty a sprinty</span><span>★ Automatické faktúry</span><span>★ Evidencia zariadení</span><span>★ AI pripraví draft odpovede</span><span>★ Stopky na úlohy</span><span>★ Automatické eskalácie</span><span>★ Vlastný branding</span><span>★ SK · CS · EN · DE</span>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat"><div class="stat-num" data-count="3" data-suffix="×">0</div><div class="stat-lbl">Rýchlejšie prvé odpovede</div></div>
+    <div class="stat"><div class="stat-num" data-count="60" data-suffix="%">0</div><div class="stat-lbl">Otázok vyrieši zákazník sám</div></div>
+    <div class="stat"><div class="stat-num" data-count="98" data-suffix="%">0</div><div class="stat-lbl">Splnené SLA termíny</div></div>
+    <div class="stat"><div class="stat-num" data-count="4">0</div><div class="stat-lbl">Jazyky systému</div></div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Funkcie</div>
+      <h2>Jeden nástroj, ktorý nahradí päť</h2>
+      <p>Prestanete skákať medzi Outlookom, Excelom, Trellom a fakturačným systémom. Všetko máte tu.</p>
+    </div>
+
+    <!-- Category 1 -->
+    <details class="feature-cat reveal">
+      <summary class="cat-head">
+        <span class="cat-icon"><svg class="icon"><use href="#i-message"/></svg></span>
+        <div>
+          <h3>Komunikácia so zákazníkmi</h3>
+          <p>Všetky správy a otázky na jednom mieste — email, chat, portál, aj samoobslužné články.</p>
+        </div>
+        <span class="cat-toggle" aria-hidden="true">+</span>
+      </summary>
+      <div class="feature-grid">
+        <article class="feature reveal">
+          <div class="feature-icon"><svg class="icon"><use href="#i-sparkles"/></svg></div>
+          <h3>AI asistent</h3>
+          <p>Príde nový email? AI mu sám priradí kategóriu a prioritu. Agent otvorí požiadavku a vidí pripravený návrh odpovede — už ho len upraví a pošle. Pri dlhých vláknach ich AI zhrnie do troch viet.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-icon"><svg class="icon"><use href="#i-message"/></svg></div>
+          <h3>Chat na vašom webe</h3>
+          <p>Pridajte na web chatovacie okienko — zákazník sa pýta, agent odpovedá. Keď sa konverzácia skomplikuje, jedným klikom z nej spravíte požiadavku aj s celou históriou rozhovoru.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-icon"><svg class="icon"><use href="#i-mail"/></svg></div>
+          <h3>Email, ktorý sa nestratí</h3>
+          <p>Zákazník napíše na pomoc@vaša-firma.sk — automaticky sa to zobrazí ako požiadavka. Keď mu odpoviete z Pultiqu, dostane bežný email. Nikto sa nemusí učiť nový nástroj.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-icon"><svg class="icon"><use href="#i-book"/></svg></div>
+          <h3>Svojpomoc pre zákazníkov</h3>
+          <p>Napíšte raz článok „Ako zmením fakturačnú adresu" — a 8 z 10 ľudí si odpoveď nájde sám. Menej požiadaviek pre vás, rýchlejšia pomoc pre nich. Všetci spokojnejší.</p>
+        </article>
+      </div>
+    </details>
+
+    <!-- Category 2 -->
+    <details class="feature-cat reveal">
+      <summary class="cat-head">
+        <span class="cat-icon"><svg class="icon"><use href="#i-grid"/></svg></span>
+        <div>
+          <h3>Organizácia tímu a práce</h3>
+          <p>Projekty, termíny a pozývanie ľudí. Či ste sám, alebo vás je dvadsať.</p>
+        </div>
+        <span class="cat-toggle" aria-hidden="true">+</span>
+      </summary>
+      <div class="feature-grid">
+        <article class="feature reveal">
+          <div class="feature-icon"><svg class="icon"><use href="#i-folder"/></svg></div>
+          <h3>Projektový manažér</h3>
+          <p>Veľkú zákazku rozdelíte na projekt so sprintami, míľnikmi a úlohami. <strong>Pozvete kolegov alebo klientov jedným e-mailom</strong> — dostanú prístup len k tomu, čo majú vidieť. Burndown graf ukáže, či stíhate termín.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-icon"><svg class="icon"><use href="#i-clock"/></svg></div>
+          <h3>Strážca termínov (SLA)</h3>
+          <p>Sľúbili ste klientom odpoveď do hodiny? Pri každej požiadavke vidíte odpočítavanie. Keď to začne horieť, systém sám eskaluje na vedúceho a pošle notifikáciu.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-icon"><svg class="icon"><use href="#i-zap"/></svg></div>
+          <h3>Automatizácie a makrá</h3>
+          <p>Požiadavka obsahuje slovo „refund"? Hoď to finančnému tímu a označ ako urgent. Opakujúce sa odpovede cez makrá klikom. Systém pracuje 24/7, aj keď vy spíte.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-icon"><svg class="icon"><use href="#i-timer"/></svg></div>
+          <h3>Stopky na prácu</h3>
+          <p>Pracujete na úlohe — stopky bežia. Na konci týždňa viete, kto na čom strávil koľko času. Ideálne pre freelancerov a agentúry, ktoré fakturujú podľa hodín.</p>
+        </article>
+      </div>
+    </details>
+
+    <!-- Category 3 -->
+    <details class="feature-cat reveal">
+      <summary class="cat-head">
+        <span class="cat-icon"><svg class="icon"><use href="#i-briefcase"/></svg></span>
+        <div>
+          <h3>Biznis a prevádzka</h3>
+          <p>Fakturácia, evidencia, prehľady a vlastný priestor pre vašu značku.</p>
+        </div>
+        <span class="cat-toggle" aria-hidden="true">+</span>
+      </summary>
+      <div class="feature-grid">
+        <article class="feature reveal">
+          <div class="feature-icon"><svg class="icon"><use href="#i-receipt"/></svg></div>
+          <h3>Fakturácia bez starostí</h3>
+          <p>Faktúry sa generujú samé — <strong>z odpracovaných hodín alebo opakovane každý mesiac</strong>. Prišla vám faktúra v PDF od dodávateľa? AI z nej vytiahne sumy a položky za vás.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-icon"><svg class="icon"><use href="#i-monitor"/></svg></div>
+          <h3>Evidencia zariadení</h3>
+          <p>Notebooky, servery, tlačiarne — viete, kto ich má, kedy končí záruka a čo je v servise. Každé zariadenie má vlastný štítok a prepojenie na klienta alebo zamestnanca.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-icon"><svg class="icon"><use href="#i-chart"/></svg></div>
+          <h3>Prehľady pre šéfa (aj pre seba)</h3>
+          <p>Koľko trvala priemerná odpoveď minulý týždeň? Ktorý projekt žerie najviac času? Koľko ste vyfakturovali tento mesiac? Všetko na jednom dashboarde.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-icon"><svg class="icon"><use href="#i-building"/></svg></div>
+          <h3>Vlastný priestor</h3>
+          <p>Vaše logo, vaše farby, vaša doména. Prihlásenie cez firemný účet, vlastný časový formát, jazyk tímu. Vaše dáta sú bezpečne oddelené od ostatných.</p>
+        </article>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- WORKFLOW -->
+<section class="section workflow" id="workflow">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Ako to funguje</div>
+      <h2>Od správy k vyriešeniu za minúty</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <h3>Zákazník píše</h3>
+        <p>Email, chat, portál — všetko sa zbehne na jedno miesto. Žiadne preskakovanie medzi nástrojmi.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">02</div>
+        <h3>AI prevezme</h3>
+        <p>Určí tému, prioritu, nájde podobné vyriešené prípady a pripraví návrh odpovede.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">03</div>
+        <h3>Systém pracuje</h3>
+        <p>Pravidlá posunú požiadavku správnemu agentovi a spustia odpočet termínu. Bez klikania.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">04</div>
+        <h3>Hotovo</h3>
+        <p>Agent pošle odpoveď, zákazník ju dostane mailom. Vy vidíte, ako dlho to trvalo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="section compare-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Pred a po</div>
+      <h2>Takto vyzerá bežný týždeň — s Pultiqom a bez neho</h2>
+      <p>Štyri Outlook kartičky, Excel s hodinami, Trello s úlohami, chat v Messengeri. Znie to povedome?</p>
+    </div>
+    <div class="compare-grid">
+      <div class="compare-col compare-before reveal">
+        <div class="compare-head">
+          <span class="compare-badge bad">Bez Pultiqu</span>
+          <h3>Chaos v piatich nástrojoch</h3>
+        </div>
+        <ul class="compare-list">
+          <li>Emaily v Outlooku, chat v Messengeri, úlohy v Trelle — nikto nevie, kde hľadať</li>
+          <li>„Kto mu to posledne odpovedal?" — hľadáte v histórii mailov 20 minút</li>
+          <li>Faktúry píšete ručne v Exceli na konci mesiaca, nejaké hodiny zabudnete</li>
+          <li>Klient sa pýta: „Kedy to bude hotové?" — nemáte čo odpovedať</li>
+          <li>Dôležitý email sa stratí medzi 200 ďalšími</li>
+          <li>Nový kolega sa 2 týždne učí, kde čo je</li>
+        </ul>
+      </div>
+      <div class="compare-col compare-after reveal">
+        <div class="compare-head">
+          <span class="compare-badge good">S Pultiqom</span>
+          <h3>Všetko na jednom mieste</h3>
+        </div>
+        <ul class="compare-list">
+          <li>Jeden inbox — email, chat, portál. Nič vám neunikne</li>
+          <li>Každá požiadavka má celú históriu vrátane interných poznámok</li>
+          <li>Stopky počas mesiaca → faktúry sa pripravia samé, skontrolujete a pošlete</li>
+          <li>Klient má vlastný portál alebo prístup do projektu — vidí stav sám</li>
+          <li>SLA s odpočítavaním, automatické eskalácie, žiadne horiace termíny</li>
+          <li>Nový kolega dostane prístup za minútu a hneď vidí, čo má robiť</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section class="section stack-section" id="stack">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Pre koho</div>
+      <h2>Od jedného človeka po veľkú firmu</h2>
+      <p>Pultiq rastie s vami — začnite ako freelancer, pokračujte ako tím.</p>
+    </div>
+    <div class="audience-strips">
+      <div class="audience-strip reveal" style="--strip:linear-gradient(135deg,#a78bfa,#ec4899)">
+        <div class="strip-icon"><svg class="icon"><use href="#i-user"/></svg></div>
+        <div class="strip-body">
+          <h3>Freelanceri a jednotlivci</h3>
+          <p>Vlastné projekty, stopky pri úlohách, automatická fakturácia klientom. Pozvete klienta do projektu jedným e-mailom — vidí postup, schvaľuje úlohy, komunikuje priamo.</p>
+        </div>
+        <div class="strip-tags"><span>Stopky</span><span>Faktúry</span><span>Klientský portál</span></div>
+      </div>
+      <div class="audience-strip reveal" style="--strip:linear-gradient(135deg,#38bdf8,#6366f1)">
+        <div class="strip-icon"><svg class="icon"><use href="#i-bag"/></svg></div>
+        <div class="strip-body">
+          <h3>E-shopy</h3>
+          <p>Reklamácie, vratky, otázky k doprave a objednávkam. Všetko previazané s konkrétnym zákazníkom a jeho históriou nákupov.</p>
+        </div>
+        <div class="strip-tags"><span>AI kategorizácia</span><span>Návody</span><span>Chat widget</span></div>
+      </div>
+      <div class="audience-strip reveal" style="--strip:linear-gradient(135deg,#34d399,#06b6d4)">
+        <div class="strip-icon"><svg class="icon"><use href="#i-code"/></svg></div>
+        <div class="strip-body">
+          <h3>SaaS a softvérové firmy</h3>
+          <p>Bug reporty, žiadosti o funkcie, technická pomoc. Agenti vidia celý kontext od prvej správy, vývojári dostanú jasné zadanie.</p>
+        </div>
+        <div class="strip-tags"><span>Požiadavky</span><span>Projekty</span><span>Sprinty</span></div>
+      </div>
+      <div class="audience-strip reveal" style="--strip:linear-gradient(135deg,#fbbf24,#f472b6)">
+        <div class="strip-icon"><svg class="icon"><use href="#i-office"/></svg></div>
+        <div class="strip-body">
+          <h3>Agentúry a B2B</h3>
+          <p>Komunikácia s klientmi so zárukami SLA, projekty so sprintami a míľnikmi, stopky strážia čas, faktúra sa píše sama z odpracovaných hodín.</p>
+        </div>
+        <div class="strip-tags"><span>SLA</span><span>Míľniky</span><span>Sledovanie času</span></div>
+      </div>
+      <div class="audience-strip reveal" style="--strip:linear-gradient(135deg,#f87171,#a78bfa)">
+        <div class="strip-icon"><svg class="icon"><use href="#i-server"/></svg></div>
+        <div class="strip-body">
+          <h3>Interné IT oddelenia</h3>
+          <p>Pomoc pre zamestnancov, evidencia zariadení a záruk, prehľad, koho najviac trápi IT. Prihlásenie cez firemný účet.</p>
+        </div>
+        <div class="strip-tags"><span>Zariadenia</span><span>AD/LDAP</span><span>Interný portál</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCENARIOS -->
+<section class="section scenarios-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Ako to vyzerá v praxi</div>
+      <h2>Pätnásť momentov zo života vášho tímu</h2>
+      <p>Takto Pultiq pracuje, kým vy robíte svoju prácu — naprieč týždňom, rolami a firmami.</p>
+    </div>
+    <div class="scenarios-wrap">
+      <button class="scen-arrow left" aria-label="Posunúť vľavo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <div class="scenarios-tracks">
+        <div class="scen-track top">
+          <article class="scenario"><div class="scenario-time">Pondelok · 9:02</div><h3>Reklamácia, ktorá sa rieši sama</h3><p>Zákazník pošle email s reklamáciou objednávky #4812. AI ju okamžite označí ako „fakturácia, urgentné" a priradí finančnému tímu. Agentka Eva vidí pripravený návrh odpovede aj celú históriu objednávky. Odpovedá za 90 sekúnd.</p></article>
+          <article class="scenario"><div class="scenario-time">Pondelok · 11:15</div><h3>Nový kolega, nový notebook</h3><p>Do HR systému pribudol nováčik. IT správca otvorí evidenciu zariadení, vyberie voľný notebook #NTB-0128 a priradí ho. Záruka, konfigurácia aj história opráv — všetko na jednom mieste.</p></article>
+          <article class="scenario"><div class="scenario-time">Pondelok · 16:40</div><h3>Faktúra od dodávateľa v PDF</h3><p>Účtovníctvu príde faktúra z autoservisu. Admin ju nahrá do Pultiqu. AI z nej vytiahne sumu, dátum, IČO aj jednotlivé položky a vytvorí návrh záznamu. Admin len skontroluje a potvrdí.</p></article>
+          <article class="scenario"><div class="scenario-time">Utorok · 8:30</div><h3>Klient pozrie, na čom robíte</h3><p>Klient dostal pozvánku do projektu. Prihlási sa a vidí sprint, úlohy aj graf progresu. Pridá komentár k dizajn návrhu — agent si prečíta, upraví úlohu, klient má pokoj.</p></article>
+          <article class="scenario"><div class="scenario-time">Utorok · 14:30</div><h3>Otázka, na ktorú netreba odpovedať</h3><p>Nový zákazník sa cez chat pýta „Ako zmením fakturačnú adresu?". Agent pošle odkaz na článok z návodov. Zákazník si to vyrieši sám do minúty — bez požiadavky, bez čakania.</p></article>
+          <article class="scenario"><div class="scenario-time">Utorok · 19:00</div><h3>Jedno makro, tri úkony</h3><p>Agent dostane štandardnú žiadosť o aktiváciu účtu. Klikne na makro „Aktivácia" — systém označí požiadavku ako „v riešení", pridá tag, vloží šablónu odpovede a priradí admina. Jedným klikom.</p></article>
+          <article class="scenario"><div class="scenario-time">Streda · 10:15</div><h3>Bug report, ktorý sa nestratí</h3><p>Cez chat príde hlásenie chyby v exportéri. Agent z konverzácie vytvorí požiadavku, priradí ju k projektu „Fakturačný modul v2" a zmení na úlohu v sprinte. Vývojár ju vidí ešte v ten deň.</p></article>
+          <article class="scenario"><div class="scenario-time">Streda · 13:05</div><h3>24 správ zhrnutých do troch viet</h3><p>Kolega preberá dlhé vlákno komplikovanej reklamácie. Namiesto čítania 24 správ klikne na „Zhrnúť". AI mu za 2 sekundy napíše problém, doterajšie kroky a čo klient chce.</p></article>
+        </div>
+        <div class="scen-track bottom">
+          <article class="scenario"><div class="scenario-time">Streda · 17:45</div><h3>VIP klient, ktorý nepočká</h3><p>Dôležitý klient má sľúbenú odpoveď do hodiny. Požiadavka je otvorená už 40 minút. Na dashboarde svieti červené varovanie, agent eskaluje vedúcemu. Klient dostane odpoveď do 50 minút. Sľub splnený.</p></article>
+          <article class="scenario"><div class="scenario-time">Štvrtok · 9:20</div><h3>Automatizácia zachytí refund</h3><p>Zákazník pošle email so slovom „refund". Pultiq ho okamžite označí ako urgentný, priradí finančnému tímu, pripojí priečinok s objednávkami a pošle notifikáciu vedúcemu. Za 0,3 sekundy, bez človeka.</p></article>
+          <article class="scenario"><div class="scenario-time">Štvrtok · 12:40</div><h3>Faktúra, ktorá sa vystaví sama</h3><p>Prvého v mesiaci systém vygeneruje opakovanú faktúru pre 42 klientov na mesačné kontrakty. Každý dostane PDF na e-mail s platobným odkazom. Ráno otvoríte prehľad — 38 už zaplatené.</p></article>
+          <article class="scenario"><div class="scenario-time">Štvrtok · 15:55</div><h3>Míľnik hotový, klient informovaný</h3><p>Agentúra dokončila míľnik „Design Review". Manažérka ho označí ako hotový — systém automaticky pošle klientovi e-mail so súhrnom, priloží výstupy a pripraví ďalší míľnik na schválenie.</p></article>
+          <article class="scenario"><div class="scenario-time">Piatok · 10:00</div><h3>Pondelkový report už v piatok</h3><p>Manažér chce čísla pred poradou. Otvorí prehľady: priemerný čas odpovede klesol z 2h 14min na 47min, SLA compliance 98,4 %, najviac vyriešených má Júlia. Screenshot, hotovo.</p></article>
+          <article class="scenario"><div class="scenario-time">Piatok · 14:20</div><h3>Rozbitá klávesnica v kancelárii</h3><p>Kolega z marketingu napíše na interný portál: „klávesnica nefunguje". Systém hneď zobrazí, aký notebook používa (MacBook Pro #NTB-0094), otvorí záručný list a navrhne servisnú objednávku.</p></article>
+          <article class="scenario"><div class="scenario-time">Piatok · 20:10</div><h3>Freelancer zatvára mesiac</h3><p>Marek je freelance vývojár s tromi klientmi. Za celý mesiac klikal stopky pri úlohách. V piatok večer otvorí faktúry — systém má pripravené tri draft faktúry podľa hodín. Účtovníctvo za 15 minút.</p></article>
+        </div>
+      </div>
+      <button class="scen-arrow right" aria-label="Posunúť vpravo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Časté otázky</div>
+      <h2>Na čo sa ľudia najčastejšie pýtajú</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq reveal">
+        <summary>Môžem začať ako freelancer a neskôr pridať tím?</summary>
+        <p>Áno. Začnite sami s jedným účtom, keď budete chcieť, jednoducho pozvete kolegov e-mailom. Neprerábate nič — všetky vaše projekty, klienti a faktúry zostávajú. Platíte len za aktívnych členov tímu.</p>
+      </details>
+      <details class="faq reveal">
+        <summary>Ako rýchlo viem začať používať Pultiq?</summary>
+        <p>Registrácia trvá 2 minúty, základné nastavenie (logo, farby, prvý e-mail) ďalších 15. Prvú požiadavku viete prijať hneď — buď z e-mailu, chatu na webe, alebo ručne. Na plné využitie všetkých funkcií (automatizácie, SLA, fakturácia) si odporúčame vyhradiť hodinu.</p>
+      </details>
+      <details class="faq reveal">
+        <summary>Môžem mať vlastnú doménu a logo?</summary>
+        <p>Samozrejme. Vlastná subdoména (pomoc.vaša-firma.sk), logo, farby a e-mailové šablóny sú súčasťou Pro plánu. V Enterprise dostanete aj vlastný e-mail server a SSO cez Microsoft/Google.</p>
+      </details>
+      <details class="faq reveal">
+        <summary>Ako viem preniesť dáta zo starého systému?</summary>
+        <p>Import z CSV pre zákazníkov a požiadavky, e-mailová integrácia si historické konverzácie stiahne sama. Pri väčších migráciách (Zendesk, Freshdesk, Jira Service Desk) vám pomôžeme zadarmo na Pro a Enterprise plánoch.</p>
+      </details>
+      <details class="faq reveal">
+        <summary>Kde sú uložené moje dáta?</summary>
+        <p>Servery v Európe (Frankfurt, Amsterdam), plne v súlade s GDPR. Všetko šifrované, denné zálohovanie, SLA dostupnosť 99.9%. Na Enterprise pláne dostupné aj nasadenie u vás na serveri (self-hosted).</p>
+      </details>
+      <details class="faq reveal">
+        <summary>Viem si to vyskúšať bez platenia?</summary>
+        <p>Áno — Starter plán je zadarmo navždy (3 agenti, 500 požiadaviek mesačne, základné funkcie). Pro plán má 14-dňovú skúšobnú dobu bez kreditnej karty, môžete sa kedykoľvek vrátiť na Starter.</p>
+      </details>
+      <details class="faq reveal">
+        <summary>Podporujete slovenčinu a češtinu?</summary>
+        <p>Áno, plne. Celé rozhranie, e-mailové notifikácie, návody aj AI asistent rozumejú a odpovedajú po slovensky, česky, anglicky a nemecky. Každý používateľ si volí svoj jazyk.</p>
+      </details>
+      <details class="faq reveal">
+        <summary>Môžem zrušiť kedykoľvek?</summary>
+        <p>Áno, mesačné predplatné zrušíte kedykoľvek jedným klikom v nastaveniach. Do konca obdobia máte plný prístup, potom si môžete svoje dáta exportovať (všetky požiadavky, klientov, faktúry) vo formáte CSV alebo JSON.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Cenník</div>
+      <h2>Pracujeme na ňom</h2>
+      <p>Pultiq je v otvorenej beta verzii — počas tohto obdobia je používanie <strong>zdarma</strong>. Ceny zverejníme, keď dokončíme všetky funkcie.</p>
+    </div>
+    <div class="coming-soon reveal">
+      <div class="coming-badge">Coming Soon</div>
+      <h3>Beta je teraz zadarmo</h3>
+      <p>Ako skorý používateľ dostanete po spustení predplatného výhodné podmienky — ideálne je pridať sa teraz, pomôcť nám spätnou väzbou a zarezervovať si cenové výhody.</p>
+      <div class="coming-features">
+        <div class="coming-feat"><strong>✓ Prístup ku všetkým funkciám</strong><span>Bez obmedzenia počtu požiadaviek či agentov počas bety</span></div>
+        <div class="coming-feat"><strong>✓ Priama komunikácia s tímom</strong><span>Vaše návrhy ovplyvnia, ako bude vyzerať finálny produkt</span></div>
+        <div class="coming-feat"><strong>✓ Zvýhodnená cena natrvalo</strong><span>Po spustení cenníka vám zaručíme špeciálnu early-adopter zľavu</span></div>
+      </div>
+      <a href="#cta" class="btn btn-primary coming-cta">Pridať sa do bety</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="cta">
+  <div class="container">
+    <div class="cta-box reveal">
+      <h2>Pridajte sa do Open Bety</h2>
+      <p>Pultiq je teraz zdarma — zaregistrujte sa a buďte pri tom od začiatku.</p>
+      <form class="cta-form" onsubmit="event.preventDefault(); this.querySelector('button').innerText='Odoslané'">
+        <input type="email" placeholder="vas@email.sk" required />
+        <button class="btn btn-primary" type="submit">Získať prístup</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <div class="logo"><span class="logo-mark"><svg viewBox="90 80 180 200" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="footG" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#a78bfa"/><stop offset="33%" stop-color="#38bdf8"/><stop offset="66%" stop-color="#34d399"/><stop offset="100%" stop-color="#f472b6"/></linearGradient></defs><g transform="translate(30 30)" fill="url(#footG)" fill-rule="evenodd"><path d="M 70 60 L 120 60 A 50 50 0 0 1 120 160 L 95 160 L 95 240 L 70 240 Z M 95 85 L 120 85 A 25 25 0 0 1 120 135 L 95 135 Z"/></g><g transform="translate(330 30) scale(-1 1)" fill="url(#footG)" fill-rule="evenodd"><path d="M 70 60 L 120 60 A 50 50 0 0 1 120 160 L 95 160 L 95 240 L 70 240 Z M 95 85 L 120 85 A 25 25 0 0 1 120 135 L 95 135 Z"/></g></svg></span><span>pultiq</span></div>
+      <p class="muted">Zdvihnite produktivitu svojho tímu. Jeden nástroj namiesto piatich.</p>
+    </div>
+    <div>
+      <h5>Produkt</h5>
+      <a href="#features">Funkcie</a>
+      <a href="#pricing">Cenník</a>
+      <a href="#">Novinky</a>
+    </div>
+    <div>
+      <h5>Firma</h5>
+      <a href="#">O nás</a>
+      <a href="#">Blog</a>
+      <a href="#">Kontakt</a>
+    </div>
+    <div>
+      <h5>Právne</h5>
+      <a href="#">Ochrana súkromia</a>
+      <a href="#">Podmienky</a>
+      <a href="#">GDPR</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Pultiq. Všetky práva vyhradené.</div>
+</footer>
+
+<!-- GSAP (greensock/gsap) — used only for hero entrance + counters -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
