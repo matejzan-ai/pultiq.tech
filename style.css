@@ -790,6 +790,10 @@ img,svg{max-width:100%;display:block}
   color:var(--text);font-size:15px;font-family:inherit;
 }
 .cta-form input:focus{outline:none;border-color:var(--primary)}
+.cta-form input:disabled{opacity:0.5;cursor:not-allowed}
+.cta-fine{
+  margin-top:16px;font-size:12px;color:var(--muted);opacity:0.75;
+}
 
 /* ========= FOOTER ========= */
 .footer{border-top:1px solid var(--border);padding:60px 0 24px;margin-top:40px}

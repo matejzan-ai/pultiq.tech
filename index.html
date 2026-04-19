@@ -710,12 +710,13 @@
 <section class="cta-section" id="cta">
   <div class="container">
     <div class="cta-box reveal">
-      <h2>Pridajte sa do Open Bety</h2>
-      <p>Pultiq je teraz zdarma — zaregistrujte sa a buďte pri tom od začiatku.</p>
-      <form class="cta-form" onsubmit="event.preventDefault(); this.querySelector('button').innerText='Odoslané'">
+      <h2>Buďte v obraze</h2>
+      <p>Prihláste sa na odber noviniek — novinky z vývoja, tipy na produktivitu a info keď spustíme ďalšie funkcie. Žiadny spam, odhlásiť sa môžete kedykoľvek.</p>
+      <form class="cta-form" onsubmit="event.preventDefault(); this.querySelector('button').innerText='✓ Prihlásené'; this.querySelector('input').disabled=true">
         <input type="email" placeholder="vas@email.sk" required />
-        <button class="btn btn-primary" type="submit">Získať prístup</button>
+        <button class="btn btn-primary" type="submit">Prihlásiť na odber</button>
       </form>
+      <p class="cta-fine">Posielame max. raz za 2 týždne. Používame len na newsletter.</p>
     </div>
   </div>
 </section>
