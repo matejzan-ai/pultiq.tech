@@ -520,7 +520,7 @@ img,svg{max-width:100%;display:block}
 }
 .audience-strip[open]::before{width:6px}
 .strip-head{
-  display:grid;grid-template-columns:80px 1fr auto auto;gap:20px;align-items:center;
+  display:grid;grid-template-columns:80px 1fr auto;gap:20px;align-items:center;
   padding:24px 28px;
   cursor:pointer;list-style:none;
 }
@@ -589,7 +589,6 @@ img,svg{max-width:100%;display:block}
 @media(max-width:900px){
   .strip-head{grid-template-columns:60px 1fr auto;padding:20px}
   .strip-icon{font-size:32px;width:56px;height:56px}
-  .strip-tags{display:none}
   .strip-detail{grid-template-columns:1fr;gap:22px;padding:20px;padding-top:20px}
 }
 
