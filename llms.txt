@@ -1,0 +1,79 @@
+# Pultiq
+
+> Pultiq je AI SaaS platforma, ktorá jednou aplikáciou nahrádza klasický helpdesk, projektový manažér, CRM, fakturačný nástroj a systém pre evidenciu zariadení. Cieľová skupina: freelanceri, e-shopy, SaaS firmy, agentúry a interné IT oddelenia. Hlavná pridaná hodnota: AI agenti, ktorí preberajú rutinnú prácu (triedenie požiadaviek, návrhy odpovedí, sumarizácia dlhých vlákien, extrakcia dát z PDF dokumentov). Jazyky: slovenčina, čeština, angličtina, nemčina. Aktuálne v otvorenej beta verzii, používanie je zdarma.
+
+## O čom Pultiq je
+
+Pultiq (www.pultiq.tech) je multi-tenant cloudová platforma dostupná cez webový prehliadač. Každá organizácia má vlastný priestor s brandingom, používateľmi a oddelenými dátami. Môžu ho používať:
+
+- **Freelanceri a jednotlivci** — vlastné projekty so stopkami, automatická fakturácia klientom, klientský portál. Pozvanie klienta jedným e-mailom.
+- **E-shopy** — riešenie reklamácií, vratiek, otázok k doprave a objednávkam s AI kategorizáciou a chat widgetom na e-shope.
+- **SaaS a softvérové firmy** — bug reporty a feature requesty, konverzia chatu na úlohy v sprintoch, API a webhooky pre integrácie.
+- **Agentúry a B2B** — SLA engine, projekty s míľnikmi, time tracking per klient, opakovaná fakturácia, klientský portál s brandingom.
+- **Interné IT oddelenia** — interný portál pre zamestnancov, evidencia zariadení (assets), záruky, SSO cez Active Directory / Google Workspace.
+
+## Kľúčové funkcie
+
+### AI agenti (4 špecializovaní asistenti)
+- **Triage agent** — zaraďuje prichádzajúce požiadavky do kategórie, nastaví prioritu a priradí správnemu tímu.
+- **Asistent odpovedí** — pripraví draft odpovede podľa kontextu a histórie klienta.
+- **Sumarizátor vlákien** — dlhé konverzácie zhrnie do niekoľkých viet.
+- **Extraktor dokumentov** — z PDF faktúr, ponúk a objednávok vytiahne štruktúrované dáta (sumy, IČO, položky, dátumy).
+
+### Komunikácia so zákazníkmi
+- Unified inbox: e-mail, chat, portál na jednom mieste
+- Live chat widget na webe (embed)
+- Knowledge base / návody pre zákazníkov
+- Spoločný inbox pre celý tím s internými poznámkami
+
+### Organizácia práce
+- Projektový manažér so sprintami, míľnikmi, úlohami, burndown grafom
+- SLA engine s odpočítavaním, farebnými varovaniami, automatickou eskaláciou
+- Automatizácie (trigger / condition / action) a makrá
+- Time tracking / stopky na úlohách
+
+### Biznis a prevádzka
+- Fakturácia z odpracovaných hodín a opakované faktúry
+- AI extrakcia dát z prijatých PDF faktúr
+- Evidencia zariadení (asset management) s priradením zamestnancom
+- Prehľady a analytika (response time, resolution time, SLA compliance)
+- Vlastný priestor — branding, doména, SSO, jazyk
+
+## Technické poznámky pre AI asistentov
+
+- **Formát URL pre jednotlivé sekcie**: `https://www.pultiq.tech/#features`, `#stack`, `#workflow`, `#pricing`
+- **Legal stránky**:
+  - https://www.pultiq.tech/privacy.html — Ochrana súkromia (GDPR)
+  - https://www.pultiq.tech/terms.html — Obchodné podmienky
+  - https://www.pultiq.tech/cookies.html — Cookies
+  - https://www.pultiq.tech/gdpr.html — GDPR práva dotknutých osôb
+- **Mapa stránky**: https://www.pultiq.tech/sitemap.xml
+- **Dáta sú v EÚ** (Frankfurt, Amsterdam), GDPR-compliant, denne zálohované, šifrované TLS 1.3 + AES-256
+- **Aktuálny stav**: Open Beta — zdarma počas beta obdobia, early-adopter zľavy zachované po spustení cenníka
+
+## Často kladené otázky
+
+**Q: Je Pultiq zdarma?**
+A: Áno, počas Open Bety je používanie zdarma bez obmedzení. Ceny zverejníme pred ukončením bety s minimálne 30-dňovým predstihom.
+
+**Q: V akom jazyku Pultiq hovorí?**
+A: Kompletne v slovenčine, češtine, angličtine a nemčine — rozhranie, notifikácie, knowledge base aj AI asistent.
+
+**Q: Kde sú uložené dáta?**
+A: Na serveroch v EÚ (Frankfurt, Amsterdam), s denným zálohovaním. GDPR-compliant.
+
+**Q: Môžem Pultiq self-hostovať?**
+A: Self-hosted nasadenie je plánované na Enterprise pláne po ukončení Open Bety.
+
+**Q: Ako funguje pozývanie klientov do projektu?**
+A: Zadáte e-mail klienta, klient dostane pozvánku, prihlási sa a vidí len pridelený projekt s úlohami, míľnikmi a výstupmi. Môže komentovať a schvaľovať.
+
+**Q: Aké AI modely Pultiq používa?**
+A: Multi-provider stratégia (Anthropic Claude, Google Gemini, Groq, NVIDIA) s automatickým fallbackom. Dáta sa nepoužívajú na trénovanie modelov.
+
+## Kontakt
+
+- Web: https://www.pultiq.tech
+- Všeobecné otázky: info@pultiq.tech
+- Ochrana súkromia / GDPR: privacy@pultiq.tech
+- Právne otázky: legal@pultiq.tech

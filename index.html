@@ -3,13 +3,168 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Pultiq — Zdvihnite produktivitu svojho tímu</title>
-<meta name="description" content="Pultiq zjednodušuje komunikáciu so zákazníkmi, projekty, fakturáciu aj evidenciu zariadení — všetko v jednej aplikácii, s AI asistentom." />
+<title>Pultiq — AI helpdesk, projekty, fakturácia a evidencia zariadení v jednom | Open Beta zdarma</title>
+<meta name="description" content="Pultiq nahrádza helpdesk, projektový manažér, CRM, fakturačný systém a evidenciu zariadení jedinou aplikáciou. AI agenti triedia požiadavky, píšu odpovede a extrahujú dáta z PDF. Pre freelancerov, e-shopy, SaaS firmy, agentúry aj interné IT. Slovenčina, Čeština, Angličtina, Nemčina. Open beta zdarma." />
+<meta name="keywords" content="helpdesk, ticketing systém, AI asistent, zákaznícka podpora, projektový manažér, fakturácia, CRM, Slovensko, slovenský helpdesk, multi-tenant SaaS, live chat, SLA, knowledge base, asset management, time tracking" />
+<meta name="author" content="Pultiq" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<link rel="canonical" href="https://www.pultiq.tech/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Pultiq" />
+<meta property="og:url" content="https://www.pultiq.tech/" />
+<meta property="og:title" content="Pultiq — AI nástroj, ktorý nahradí 5 iných" />
+<meta property="og:description" content="Helpdesk s AI agentmi, projekty, fakturácia aj evidencia zariadení v jednej aplikácii. Pre freelancerov, e-shopy, SaaS aj firmy. Open beta zdarma." />
+<meta property="og:image" content="https://www.pultiq.tech/favicon.svg" />
+<meta property="og:locale" content="sk_SK" />
+<meta property="og:locale:alternate" content="cs_CZ" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="de_DE" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Pultiq — AI nástroj, ktorý nahradí 5 iných" />
+<meta name="twitter:description" content="Helpdesk s AI agentmi, projekty, fakturácia, evidencia zariadení. Open beta zdarma." />
+<meta name="twitter:image" content="https://www.pultiq.tech/favicon.svg" />
+
+<!-- Theme / PWA-ish -->
+<meta name="theme-color" content="#07070c" />
+<meta name="color-scheme" content="dark" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <link rel="stylesheet" href="style.css" />
+
+<!-- JSON-LD: Organization + SoftwareApplication + FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.pultiq.tech/#organization",
+      "name": "Pultiq",
+      "url": "https://www.pultiq.tech/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.pultiq.tech/favicon.svg",
+        "width": 360,
+        "height": 360
+      },
+      "description": "Pultiq je AI platforma pre zákaznícku komunikáciu, projekty, fakturáciu a evidenciu zariadení.",
+      "foundingDate": "2026",
+      "areaServed": ["SK", "CZ", "AT", "DE", "EU"],
+      "availableLanguage": ["sk", "cs", "en", "de"],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "info@pultiq.tech",
+        "availableLanguage": ["Slovak", "Czech", "English", "German"]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.pultiq.tech/#website",
+      "url": "https://www.pultiq.tech/",
+      "name": "Pultiq",
+      "publisher": { "@id": "https://www.pultiq.tech/#organization" },
+      "inLanguage": "sk-SK"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.pultiq.tech/#software",
+      "name": "Pultiq",
+      "url": "https://www.pultiq.tech/",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Helpdesk, Project Management, Invoicing, Asset Management, CRM",
+      "operatingSystem": "Web, iOS, Android",
+      "description": "Pultiq zjednocuje komunikáciu so zákazníkmi, správu projektov, fakturáciu a evidenciu zariadení do jednej aplikácie s AI agentmi. Multi-tenant SaaS so štyrmi jazykmi.",
+      "softwareVersion": "2.0 (Open Beta)",
+      "inLanguage": ["sk", "cs", "en", "de"],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "description": "Open beta — zdarma počas beta obdobia"
+      },
+      "featureList": [
+        "AI agenti (triage, návrh odpovedí, sumarizácia, extrakcia dokumentov)",
+        "Unified inbox (email + chat + portál)",
+        "Projektový manažér so sprintami, míľnikmi a úlohami",
+        "SLA engine s eskaláciami",
+        "Automatizácie a makrá",
+        "Knowledge base / návody pre zákazníkov",
+        "Live chat widget",
+        "Fakturácia z odpracovaných hodín + opakované faktúry",
+        "AI extrakcia dát z PDF faktúr",
+        "Evidencia zariadení (asset management)",
+        "Time tracking / stopky",
+        "Multi-tenant s vlastným brandingom",
+        "Prehľady a analytika",
+        "SSO / AD / LDAP prihlasovanie"
+      ],
+      "publisher": { "@id": "https://www.pultiq.tech/#organization" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Môžem začať ako freelancer a neskôr pridať tím?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Áno. Začnite sami s jedným účtom, keď budete chcieť, jednoducho pozvete kolegov e-mailom. Neprerábate nič — všetky projekty, klienti a faktúry zostávajú. Platíte len za aktívnych členov tímu."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ako rýchlo viem začať používať Pultiq?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Registrácia trvá 2 minúty, základné nastavenie (logo, farby, prvý e-mail) ďalších 15. Prvú požiadavku viete prijať hneď — z e-mailu, chatu alebo ručne. Plné využitie všetkých funkcií (automatizácie, SLA, fakturácia) zaberie hodinu."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Môžem mať vlastnú doménu a logo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Áno. Vlastná subdoména, logo, farby a e-mailové šablóny sú súčasťou Pro plánu. V Enterprise dostanete aj vlastný e-mail server a SSO cez Microsoft alebo Google."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kde sú uložené moje dáta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Servery v Európe (Frankfurt, Amsterdam), plne v súlade s GDPR. Šifrované spojenie, denné zálohovanie, SLA dostupnosť 99,9 %. Na Enterprise pláne je dostupné aj self-hosted nasadenie."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Podporujete slovenčinu a češtinu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Áno, plne. Rozhranie, e-mailové notifikácie, návody aj AI asistent rozumejú a odpovedajú po slovensky, česky, anglicky a nemecky. Každý používateľ si volí svoj jazyk."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Viem si Pultiq vyskúšať bez platenia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Počas Open Bety je Pultiq zdarma pre všetkých. Po spustení cenníka zostanete early-adopter so zvýhodnenou cenou natrvalo."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -695,9 +850,10 @@
     </div>
     <div>
       <h5>Právne</h5>
-      <a href="#">Ochrana súkromia</a>
-      <a href="#">Podmienky</a>
-      <a href="#">GDPR</a>
+      <a href="/privacy.html">Ochrana súkromia</a>
+      <a href="/terms.html">Obchodné podmienky</a>
+      <a href="/cookies.html">Cookies</a>
+      <a href="/gdpr.html">GDPR práva</a>
     </div>
   </div>
   <div class="footer-bottom">© 2026 Pultiq. Všetky práva vyhradené.</div>
