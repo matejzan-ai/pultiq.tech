@@ -552,12 +552,12 @@ img,svg{max-width:100%;display:block}
 .audience-strip[open] .strip-toggle{transform:rotate(45deg)}
 .strip-detail{
   padding:4px 28px 28px 28px;
-  display:grid;grid-template-columns:1fr 1fr;gap:32px;
+  display:grid;grid-template-columns:1fr;gap:32px;
   border-top:1px dashed var(--border);
   margin:0 0 0 0;
   padding-top:24px;
 }
-.strip-detail.strip-detail-3{grid-template-columns:1fr 1fr 1.25fr}
+.strip-detail.strip-detail-3{grid-template-columns:1fr 1.15fr}
 .strip-detail-highlight{
   padding:20px 22px;border-radius:14px;
   background:linear-gradient(135deg,rgba(167,139,250,0.08),rgba(236,72,153,0.05));
@@ -568,7 +568,7 @@ img,svg{max-width:100%;display:block}
 .strip-detail-highlight li strong{color:var(--text);font-weight:600}
 .strip-detail-highlight li{font-size:13px}
 @media(max-width:1100px){
-  .strip-detail.strip-detail-3{grid-template-columns:1fr 1fr}
+  .strip-detail.strip-detail-3{grid-template-columns:1fr}
   .strip-detail-highlight{grid-column:1/-1}
 }
 .strip-detail h4{
