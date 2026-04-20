@@ -230,7 +230,7 @@ img,svg{max-width:100%;display:block}
   color:#c4b5fd;
   margin-left:4px;
 }
-.logo-mark{height:40px;display:flex;align-items:center}
+.logo-mark{height:22px;display:flex;align-items:center}
 .logo-mark svg{height:100%;width:auto;display:block}
 .nav-links{display:flex;gap:32px}
 .nav-links a{font-size:14px;color:var(--muted);transition:color .2s;position:relative}
