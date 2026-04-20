@@ -1,22 +1,43 @@
-<svg viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 360 260" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="fLeft" x1="0%" y1="100%" x2="0%" y2="0%">
+    <linearGradient id="leftLeg" x1="0%" y1="100%" x2="0%" y2="0%">
       <stop offset="0%" stop-color="#a78bfa"/>
       <stop offset="100%" stop-color="#38bdf8"/>
     </linearGradient>
-    <linearGradient id="fRight" x1="0%" y1="100%" x2="0%" y2="0%">
+    <linearGradient id="rightLeg" x1="0%" y1="100%" x2="0%" y2="0%">
       <stop offset="0%" stop-color="#f472b6"/>
       <stop offset="100%" stop-color="#38bdf8"/>
     </linearGradient>
-    <mask id="fTableMask">
-      <rect width="360" height="220" fill="white"/>
-      <rect x="115" y="48" width="55" height="34" rx="12" fill="black"/>
-      <rect x="190" y="48" width="55" height="34" rx="12" fill="black"/>
-    </mask>
   </defs>
-  <g mask="url(#fTableMask)">
-    <path d="M 30 100 L 30 60 A 30 30 0 0 1 60 30 L 300 30 A 30 30 0 0 1 330 60 L 330 100 Z" fill="#38bdf8"/>
-  </g>
-  <rect x="30" y="100" width="70" height="80" fill="url(#fLeft)"/>
-  <rect x="260" y="100" width="70" height="80" fill="url(#fRight)"/>
+
+  <!-- Brand dark background -->
+  <rect width="360" height="260" fill="#07070c"/>
+
+  <!-- Tabletop with rounded top corners -->
+  <path d="M 30 120
+           L 30 80
+           A 30 30 0 0 1 60 50
+           L 300 50
+           A 30 30 0 0 1 330 80
+           L 330 120
+           Z"
+        fill="#38bdf8"/>
+
+  <!-- Left leg -->
+  <rect x="30" y="120" width="70" height="80" fill="url(#leftLeg)"/>
+
+  <!-- Right leg -->
+  <rect x="260" y="120" width="70" height="80" fill="url(#rightLeg)"/>
+
+  <!-- Eyes -->
+  <rect x="115" y="68" width="55" height="34" rx="12" fill="#07070c"/>
+  <rect x="190" y="68" width="55" height="34" rx="12" fill="#07070c"/>
+
+  <!-- Tagline: pulTiq (lowercase with capital T) -->
+  <text x="180" y="243"
+        font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+        font-size="24" font-weight="500"
+        letter-spacing="2"
+        text-anchor="middle"
+        fill="#e6e6ef">pultiq</text>
 </svg>

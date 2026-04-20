@@ -230,8 +230,8 @@ img,svg{max-width:100%;display:block}
   color:#c4b5fd;
   margin-left:4px;
 }
-.logo-mark{width:40px;height:40px;display:grid;place-items:center}
-.logo-mark svg{width:100%;height:100%;display:block}
+.logo-mark{height:40px;display:flex;align-items:center}
+.logo-mark svg{height:100%;width:auto;display:block}
 .nav-links{display:flex;gap:32px}
 .nav-links a{font-size:14px;color:var(--muted);transition:color .2s;position:relative}
 .nav-links a:hover{color:var(--text)}
